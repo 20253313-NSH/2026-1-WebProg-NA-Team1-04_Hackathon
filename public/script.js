@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('action');
   if (btn) {
@@ -6,6 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+    let feedbackData = [];
+
+    async function fetchFeedbacks() {
+        try {
+            const response = await fetch(API_URL);
+            feedbackData = await response.json();
+            
+            // 현재 페이지가 학생 페이지인지 교수 페이지인지에 따라 다르게 렌더링
+            if (studentList) renderStudentView(feedbackData);
+            if (teacherList) renderTeacherView(feedbackData);
+        } catch (err) {
+            console.error('조회 실패:', err);
+        }
+    }
    function renderTeacherView(data) {
         teacherList.innerHTML = '';
         data.forEach(item => {
