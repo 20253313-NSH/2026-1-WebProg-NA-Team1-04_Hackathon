@@ -21,6 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('조회 실패:', err);
         }
     }
+    function renderStudentView(data) {
+        studentList.innerHTML = '';
+        document.getElementById('totalCount').textContent = `총 ${data.length}개`;
+
+        data.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'feedback-card';
+            card.innerHTML = `
+                <p class="feedback-text">${item.content}</p>
+                <button class="like-btn" onclick="handleLike('${item._id}')">
+                    공감 ${item.likes || 0}
+                </button>
+            `;
+            studentList.appendChild(card);
+        });
+    }
+
    function renderTeacherView(data) {
         teacherList.innerHTML = '';
         data.forEach(item => {
