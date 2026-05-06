@@ -1,15 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>학생 페이지</title>
+    <title>피드백 목록</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<form action="/request-param" method="post">
-  username: <input type="text" name="username" />
-  age: <input type="text" name="age" />
-  <button type="submit">전송</button>
-</form>
+    <div class="student-container">
+        <header class="page-header">
+            <div class="header-content">
+                <h1>수업 피드백 목록</h1>
+                <button type="button" class="btn-write" onclick="location.href='write.html'">
+                    새 피드백 작성하기
+                </button>
+            </div>
+            <p>학생들의 의견을 확인하고 공감 버튼을 눌러보세요.</p>
+        </header>
+
+        <hr class="divider">
+
+        <section class="feedback-list-section">
+            <div class="list-header">
+                <h2>전체 피드백</h2>
+                <div class="list-meta">
+                    <span id="totalCount">총 0개</span>
+                </div>
+            </div>
+          
+            <div id="studentFeedbackList" class="feedback-list">
+                <p class="loading-text">피드백을 불러오는 중입니다...</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
