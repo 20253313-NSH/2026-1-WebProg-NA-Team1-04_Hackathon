@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>선생님 페이지</title>
+    <title>피드백 관리 대시보드</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="teacher-container">
+        <header class="dashboard-header">
+            <h1>학생 피드백 대시보드</h1>
+            
+            <div class="sort-controls">
+                <button id="sortByLikesBtn" class="btn active">공감순</button>
+                <button id="sortByLatestBtn" class="btn">최신순</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="feedbackList" class="feedback-list">
     
+                
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
