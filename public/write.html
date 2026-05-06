@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>피드백 작성하기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="write-container">
+        <header class="write-header">
+            <button type="button" class="btn-back" onclick="location.href='student.html'">← 목록으로</button>
+            <h1>📝 피드백 작성</h1>
+        </header>
+
+        <main class="write-main">
+            <form id="writeForm">
+                <div class="input-group">
+                    <label for="feedbackInput">교수님께 전달할 소중한 의견을 남겨주세요.</label>
+                    <textarea 
+                        id="feedbackInput" 
+                        name="content"
+                        placeholder="수업 내용 중 궁금한 점이나 건의사항을 자유롭게 적어주세요." 
+                        maxlength="500"
+                        required
+                    ></textarea>
+                    <div class="char-count"><span id="currentChars">0</span> / 500</div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="location.href='student.html'">취소</button>
+                    <button type="submit" class="btn-submit">등록하기</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
