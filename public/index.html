@@ -3,15 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>팀플 4조</title>
+    <title>학생이신가요? 교수자이신가요?</title>
+    <style>
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #a0e1eb;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 60px;
+            font-weight: 900; 
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background-color: #2c3e50; 
+            border: none;
+            border-radius: 10px; 
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            transition: all 0.2s ease-in-out;
+            text-decoration: none; 
+        }
+
+        .btn:hover {
+            background-color: #1a252f;
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(-10vh); 
+        }
+    </style>
 </head>
 <body>
-<a href="/student.html">
-    <button>학생</button>
-</a>
+    <div class="container">
+        <h1>학생이신가요? 교수자이신가요?</h1>
 
-<a href="/teacher.html">
-    <button>선생님</button>
-</a>
+        <div class="btn-group">
+            <a href="./student.html" class="btn">학생</a>
+            <a href="./teacher.html" class="btn">교수자</a>
+        </div>
+    </div>
 </body>
 </html>
